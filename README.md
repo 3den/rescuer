@@ -1,4 +1,4 @@
-# tryer
+# try-er
 A high order function who tries way too freakin hard!
 
 `tryer` can be used to wrap any function, the resulting function can return a `default` value if any errors are raised. It also allows you to write a custom `catch` function.
@@ -8,19 +8,19 @@ A high order function who tries way too freakin hard!
 yarn:
 
 ```
-yarn add tryer
+yarn add try-er
 ```
 
 npm:
 
 ```
-npm install --save tryer
+npm install --save try-er
 ```
 
 ## Usage
 
 ```js
-import tryer from 'tryer';
+import tryer from 'try-er';
 
 function foobar(a, b) {
   // Do something weird that can throw errors
