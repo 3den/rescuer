@@ -1,0 +1,20 @@
+{
+  "name": "tryer",
+  "version": "0.0.1",
+  "description": "High Order Function that wraps any function and returns a default value if it fails.",
+  "main": "index.js",
+  "repository": "https://github.com/3den/tryer",
+  "author": "Marcelo Eden <eden@3den.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jasmine"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "jasmine": "^2.8.0"
+  }
+}
