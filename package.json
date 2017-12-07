@@ -1,16 +1,17 @@
 {
-  "name": "try-er",
-  "version": "0.0.2",
-  "description": "High Order Function that wraps any function and returns a default value if it fails.",
-  "main": "lib/tryer.js",
+  "name": "rescuer",
+  "version": "0.0.3",
+  "description": "Higher-order function that wraps any function and saves it from unwanted errors.",
+  "main": "lib/rescuer.js",
   "keywords": [
     "errors",
     "try",
-    "catch"
+    "catch",
+    "rescue"
   ],
-  "repository": "https://github.com/3den/tryer",
-  "bugs": "https://github.com/3den/tryer/issues",
-  "author": "Marcelo Eden <eden@3den.org>",
+  "repository": "https://github.com/3den/rescuer",
+  "bugs": "https://github.com/3den/rescuer/issues",
+  "author": "Marcelo Eden <spam@3den.me>",
   "license": "MIT",
   "scripts": {
     "build": "babel src -d lib",

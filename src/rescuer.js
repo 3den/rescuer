@@ -1,5 +1,5 @@
 /**
- * tryer
+ * rescuer
  * High Order Function that wraps a function and return
  * default value if there is an error.
  *
@@ -14,10 +14,10 @@
  *  allowWarn - boolean when `true` errors will be logged
  *    with `console.warn`.
  *
- * Returns High Order Function that wraps a function and returns
- *  `default` value, or `catch`, in case of errors.
+ * Returns High Order Function that wraps a function
+ *  and returns `default` value, or `catch` result, in case of errors.
  */
-export default function tryer(o = {}) {
+export default function rescuer(o = {}) {
   return (fn) => (...args) => {
     try {
       const result = fn(...args);

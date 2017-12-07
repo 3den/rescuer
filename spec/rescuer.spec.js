@@ -1,6 +1,6 @@
-import tryer from '../src/tryer';
+import rescuer from '../src/rescuer';
 
-describe('#tryer', () => {
+describe('#rescuer', () => {
   function not1(n) {
     if(n === 1) throw "Oh nooo!"
 
@@ -8,7 +8,7 @@ describe('#tryer', () => {
   }
 
   describe('without any arguments', () => {
-    const safeNot1 = tryer()(not1);
+    const safeNot1 = rescuer()(not1);
 
     it('returns undefined if there is en error', () => {
       expect(safeNot1(1)).toEqual(undefined);
@@ -23,7 +23,7 @@ describe('#tryer', () => {
   });
 
   describe('with a default value', () => {
-    const tryOrBoom = tryer({default: 'boom!'});
+    const tryOrBoom = rescuer({default: 'boom!'});
     const safeNot1 = tryOrBoom(not1);
 
     it('returns the default value if there is en error', () => {
@@ -42,7 +42,7 @@ describe('#tryer', () => {
   });
 
   describe('with a allowFalsey enabled', () => {
-    const safeNot1 = tryer({
+    const safeNot1 = rescuer({
       default: 'boom!',
       forbidFalsey: true
     })(not1);
@@ -60,7 +60,7 @@ describe('#tryer', () => {
   });
 
   describe('with a catch function', () => {
-    const safeNot1 = tryer({catch: (e) => e})(not1);
+    const safeNot1 = rescuer({catch: (e) => e})(not1);
 
     it('returns the result of `catch` when where is an error', () => {
       expect(safeNot1(1)).toEqual('Oh nooo!');
