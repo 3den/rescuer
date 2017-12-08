@@ -31,3 +31,13 @@ export default function rescuer(o = {}) {
     }
   };
 }
+
+/**
+ * rescueWithObject
+ * wraps a function and returns `{}` if there is an error or result is falsey.
+ *
+ * fn - function to be rescued.
+ *
+ * Returns safe version of `fn` that returns `{}` is there is an error or result is falsey.
+ */
+export const rescueWithObject = rescuer({default: {}, forbidFalsey: true});

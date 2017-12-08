@@ -1,6 +1,6 @@
 {
   "name": "rescuer",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Higher-order function that wraps any function and saves it from unwanted errors.",
   "main": "lib/rescuer.js",
   "keywords": [

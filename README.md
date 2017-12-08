@@ -19,6 +19,10 @@ npm install --save rescuer
 
 ## Usage
 
+### rescuer
+
+Use cases for `rescuer` function.
+
 ```js
 import rescuer from 'rescuer';
 
@@ -63,5 +67,25 @@ const safeFoobar = rescuer({allowWarn: true, default: null})(foobar);
 // be logged with console.warn.
 safeFoobar(1, 2);
 ```
+### rescueWithObject
+
+Use cases for `rescueWithObject` function.
+
+```js
+import {rescueWithObject} from '../src/rescuer';
+
+function foobar(a, b) {
+  // should return an objects, but can raise errors or return undefined when something goes wrong.
+}
+
+// ---
+// you just need to pass the function to wrap.
+const safeFoobar = rescueWithObject(foobar);
+
+// if foobar(1, 2) raises an error or returned a falsey value,
+// this function will return `{}`
+foobar(1,2);
+```
+
 
 For more details look at the specs.
